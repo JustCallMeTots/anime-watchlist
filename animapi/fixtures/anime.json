@@ -1,0 +1,46 @@
+[
+    {
+        "model": "animapi.anime",
+        "pk": 1,
+        "fields": {
+            "title": "High Card",
+            "description": "After discovering that his orphanage was on the brink of closing due to financial stress, Finn, who was living freely on the streets, set out for a casino with the aim of making a fortune. However, nothing could have prepared Finn for the nightmare that was awaiting him. Once there, Finn encountered a car chase and bloody shootout caused by a manʼs “lucky” card.",
+            "release": "Monday",
+            "genre": 1,
+            "recommended": false
+        }
+    },
+    {
+        "model": "animapi.anime",
+        "pk": 2,
+        "fields": {
+            "title": "Handyman Saitou in another world",
+            "description": "Handyman Saitou has never felt special in his life. When he’s dropped into a medieval fantasy world, he gathers a party of unique beings to survive. Surrounded by a heavy warrior, a spell-forgetting wizard, and even a divine fairy princess, he yearns to be helpful. But after Saitou saves everyone during a raid, it’s clear that having a handyman on an adventure isn’t just useful, it’s essential!",
+            "release": "Sunday",
+            "genre": 5,
+            "recommended": false
+        }
+    },
+    {
+        "model": "animapi.anime",
+        "pk": 3,
+        "fields": {
+            "title": "Kaina of the Great Snow Sea",
+            "description": "Humanity’s remnants struggle to survive above the planet atop giant orbital spire trees, safe from the danger below. Rendered unlivable, the Great Snow Sea has turned the world into a no man’s land. While out hunting, young Kaina stumbles upon an unconscious girl who’s floated up from the surface. The discovery of this trespasser brings new hope for mankind’s future—and unimaginable danger!",
+            "release": "Wednesday",
+            "genre": 8,
+            "recommended": false
+        }
+    },
+    {
+        "model": "animapi.anime",
+        "pk": 4,
+        "fields": {
+            "title": "Tomo-chan Is a Girl!",
+            "description": "Tomboy Tomo couldn’t have picked a more awkward high school crush ’cause it’s on her childhood friend, Junichiro, but he only sees her as one of the guys. Despite her pretty looks and signals, nothing gets through to this meathead! Will Junichiro ever realize Tomo’s into him and see her for the cutesy girl she actually is?!",
+            "release": "Wednesday",
+            "genre": 7,
+            "recommended": false
+        }
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "model": "animapi.watchlist_anime",
+        "pk": 1,
+        "fields": {
+            "watchlist_id": 1,
+            "anime_id": 2
+        }
+    }
+]

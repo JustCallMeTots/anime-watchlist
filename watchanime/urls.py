@@ -18,11 +18,20 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from animapi.views import GenreView
+from animapi.views import AnimeView
+from animapi.views import WatcherView
+from animapi.views import WatchlistView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'genre', GenreView, 'genre')
+router.register(r'anime', AnimeView, 'anime')
+router.register(r'watcher', WatcherView, 'watcher')
+router.register(r'watchlist', WatchlistView, 'watchlist')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('', include(router.urls)),
+    path('', include(router.urls)),
+    path('', include(router.urls))
 ]

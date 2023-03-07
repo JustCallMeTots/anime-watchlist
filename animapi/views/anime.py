@@ -2,7 +2,8 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from animapi.models import Anime, Genre
+from rest_framework.decorators import action
+from animapi.models import Anime, Genre, Watcher, Watchlist, Watchlist_Anime
 
 
 class AnimeView(ViewSet):
@@ -62,6 +63,18 @@ class AnimeView(ViewSet):
         anime = Anime.objects.get(pk=pk)
         anime.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    # @action(methods=['post'], detail=True)
+    # def watch(self, request, pk):
+    #     """post for watching anime"""
+        
+    #     watcher = Watcher.objects.get(watcher=request.data["uid"])
+    #     watchlist = Watchlist.objects.get(pk=pk)
+    #     watchlist_anime = Watchlist_Anime.objects.create(
+    #         watcher=watcher,
+    #         watchlist=watchlist
+    #     )
+    #     return Response({'message': 'Anime Added'}, status=status.HTTP_201_CREATED)
 
 
 class AnimeSerializer(serializers.ModelSerializer):
@@ -69,3 +82,9 @@ class AnimeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Anime
         fields = ('id', 'title', 'description', 'release', 'genre', 'recommended')
+        
+# class WatchlistAnimeSerializer(serializers.ModelSerializer):
+#     """blah"""
+#     class Meta:
+#         model = Watchlist_Anime
+#         fields = ('watcher')

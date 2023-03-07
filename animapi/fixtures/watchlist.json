@@ -3,8 +3,7 @@
         "model": "animapi.watchlist",
         "pk": 1,
         "fields": {
-            "watcher": 1,
-            "anime": 2
+            "watcher": 1
         }
     }
 ]

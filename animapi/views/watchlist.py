@@ -60,11 +60,11 @@ class WatchlistView(ViewSet):
     def watch(self, request, pk):
         """post for watching anime"""
         
-        anime_id = Anime.objects.get(pk=request.data["anime_id"])
-        watchlist_id = Watchlist.objects.get(pk=pk)
+        anime = Anime.objects.get(pk=request.data["anime_id"])
+        watchlist = Watchlist.objects.get(pk=pk)
         list_anime = Watchlist_Anime.objects.create(
-            anime_id=anime_id,
-            watchlist_id=watchlist_id
+            anime=anime,
+            watchlist=watchlist
         )
         return Response({'message': 'Anime Added'}, status=status.HTTP_201_CREATED)
     

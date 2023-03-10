@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
+from animapi.views.auth import check_user, register_user
 from animapi.views import GenreView
 from animapi.views import AnimeView
 from animapi.views import WatcherView
 from animapi.views import WatchlistView
+
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'genre', GenreView, 'genre')
@@ -29,6 +31,8 @@ router.register(r'watcher', WatcherView, 'watcher')
 router.register(r'watchlist', WatchlistView, 'watchlist')
 
 urlpatterns = [
+    path('register', register_user),
+    path('checkuser', check_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('', include(router.urls)),

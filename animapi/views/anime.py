@@ -3,7 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework.decorators import action
-from animapi.models import Anime, Genre, Watcher, Watchlist, Watchlist_Anime
+from animapi.models import Anime, Genre, Watcher, Watchlist_Anime
 
 
 class AnimeView(ViewSet):

@@ -1,9 +1,0 @@
-[
-    {
-        "model": "animapi.watchlist",
-        "pk": 1,
-        "fields": {
-            "watcher": 1
-        }
-    }
-]

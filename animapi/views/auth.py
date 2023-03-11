@@ -1,6 +1,7 @@
 from animapi.models import Watcher
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from animapi.serializers import WatcherSerializer
 
 
 @api_view(['POST'])
@@ -15,12 +16,10 @@ def check_user(request):
     watcher = Watcher.objects.filter(uid=uid).first()
 
     if watcher is not None:
-        data = {
-            'id': watcher.id,
-            'uid': watcher.uid,
-            'bio': watcher.bio
-        }
-        return Response(data)
+        watcher = Watcher.objects.get(uid=uid)
+        serializer = WatcherSerializer(watcher)
+
+        return Response(serializer.data)
     else:
         data = { 'valid': False }
         return Response(data)

@@ -21,14 +21,12 @@ from animapi.views.auth import check_user, register_user
 from animapi.views import GenreView
 from animapi.views import AnimeView
 from animapi.views import WatcherView
-from animapi.views import WatchlistView
 
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'genre', GenreView, 'genre')
 router.register(r'anime', AnimeView, 'anime')
 router.register(r'watcher', WatcherView, 'watcher')
-router.register(r'watchlist', WatchlistView, 'watchlist')
 
 urlpatterns = [
     path('register', register_user),
